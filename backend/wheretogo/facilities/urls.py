@@ -6,6 +6,6 @@ app_name = "facilities"
 
 
 router = routers.DefaultRouter()
-router.register("facilities", FacilityViewSet, "facilities")
+router.register("", FacilityViewSet, "facilities")
 
 urlpatterns = router.urls

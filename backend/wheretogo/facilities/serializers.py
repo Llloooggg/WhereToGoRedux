@@ -1,10 +1,10 @@
-from rest_framework_gis import serializers
+from rest_framework.serializers import ModelSerializer
 
 from facilities.models import Facility
 
 
-class FacilitySerializer(serializers.GeoFeatureModelSerializer):
+class FacilitySerializer(ModelSerializer):
     class Meta:
         model = Facility
-        fields = ("id", "name", "address", "city")
         geo_field = "location"
+        fields = ("id", "name", "address", "city")

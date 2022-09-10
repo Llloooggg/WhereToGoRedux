@@ -4,12 +4,11 @@ from django.db import models
 
 
 class Facility(models.Model):
-    name = models.CharField(max_length=200)
-    address = models.CharField(max_length=100)
-    city = models.CharField(max_length=50)
+    name = models.CharField(max_length=200, verbose_name=_("name"))
+    address = models.CharField(max_length=100, verbose_name=_("address"))
+    city = models.CharField(max_length=50, verbose_name=_("city"))
     location = gis_models.PointField(
-        null=True,
-        blank=True,
+        null=True, blank=True, verbose_name=_("location")
     )
 
     class Meta:
