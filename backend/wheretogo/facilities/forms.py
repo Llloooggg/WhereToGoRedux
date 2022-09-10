@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.gis.geos import Point
+from django.utils.translation import gettext_lazy
 
 from facilities.models import Facility
 
@@ -10,11 +11,13 @@ class FacilityLocationForm(forms.ModelForm):
         min_value=-90,
         max_value=90,
         required=True,
+        label=gettext_lazy("Latitude"),
     )
     longitude = forms.FloatField(
         min_value=-180,
         max_value=180,
         required=True,
+        label=gettext_lazy("Longitude"),
     )
 
     class Meta(object):
