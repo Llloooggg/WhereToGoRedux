@@ -1,9 +1,15 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import axios from 'axios'
+import { createApp } from "vue";
+import App from "./App.vue";
+import axios from "axios";
 
-const app = createApp(App)
+import "bootstrap/dist/css/bootstrap.min.css";
 
-app.config.globalProperties.axios=axios
+import NavigationBar from "./components/NavigationBar.vue";
 
-app.mount('#app')
+const app = createApp(App);
+
+app.config.globalProperties.axios = axios;
+
+app.component("NavigationBar", NavigationBar);
+
+app.mount("#app");
