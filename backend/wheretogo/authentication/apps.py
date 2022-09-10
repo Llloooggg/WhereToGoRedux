@@ -2,7 +2,7 @@ from django.apps import AppConfig
 from django.utils.translation import gettext_lazy
 
 
-class FacilitiesConfig(AppConfig):
+class AuthConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "facilities"
-    verbose_name = gettext_lazy("facilities")
+    name = "authentication"
+    verbose_name = gettext_lazy("authentication")
