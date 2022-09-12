@@ -1,6 +1,7 @@
 <template>
-  <div id="app" class="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 7vh">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">WhereToGo</a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -33,10 +34,12 @@
         </div>
       </div>
     </nav>
-    <div class="container">
+
+
+    <div class="container-fluid m-0 p-0" style="height: 93vh">
       <router-view />
     </div>
-  </div>
+  </body>
 </template>
 
 <script>
