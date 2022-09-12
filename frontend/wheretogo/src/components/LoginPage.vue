@@ -5,6 +5,7 @@
                 <div class="card card-container">
                     <Form @submit="handleLogin" :validation-schema="schema"
                         class="p-4 p-md-5 border rounded-3 bg-light">
+                        <h5 class="card-title">Login</h5>
                         <div class="form-group">
                             <label for="username">Username</label>
                             <Field name="username" type="text" class="form-control" />
@@ -61,7 +62,7 @@ export default {
     },
     created() {
         if (this.loggedIn) {
-            this.$router.push("/profile");
+            this.$router.push("/");
         }
     },
     methods: {
@@ -69,7 +70,7 @@ export default {
             this.loading = true;
             this.$store.dispatch("auth/login", user).then(
                 () => {
-                    this.$router.push("/profile");
+                    this.$router.push("/");
                 },
                 (error) => {
                     this.loading = false;
